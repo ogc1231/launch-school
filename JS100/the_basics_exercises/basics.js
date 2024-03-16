@@ -46,3 +46,13 @@ console.log(name)
 // 9
 let pets = {asta: 'dog', butterscotch: 'cat', pudding: 'cat', neptune: 'fish', darwin: 'lizard',}
 console.log(pets)
+
+// 10
+False
+
+// 11
+// equals 3
+
+// 12
+True
+
