@@ -21,3 +21,19 @@ for (let index = 0; index < names2.length; index += 1) {
 }
 
 console.log(upperNames2);
+
+// controlling loop
+
+let names3 = ['Chris', 'Kevin', 'Naveed', 'Pete', 'Victor'];
+let upperNames3 = [];
+
+for (let index = 0; index < names3.length; index += 1) {
+  if (names3[index] === 'Naveed') {
+    continue;
+  }
+
+  let upperCaseName3 = names3[index].toUpperCase();
+  upperNames3.push(upperCaseName3);
+}
+
+console.log(upperNames3); // => ['CHRIS', 'KEVIN', 'PETE', 'VICTOR']
