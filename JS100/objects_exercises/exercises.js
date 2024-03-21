@@ -37,12 +37,53 @@
 // console.log(obj)
 
 // 5
-let myProtoObj = {
-  foo: 1,
-  bar: 2,
-};
+// let myProtoObj = {
+//   foo: 1,
+//   bar: 2,
+// };
 
-let myObj = Object.create(myProtoObj)
-console.log(myObj)
-console.log(myObj.foo)
-console.log(myObj.bar)
+// let myObj = Object.create(myProtoObj)
+// console.log(myObj)
+// console.log(myObj.foo)
+// console.log(myObj.bar)
+
+// 6
+// primitive
+// primitive
+// object
+// primitive
+// ?
+// object
+// primitive
+// object
+
+// 7
+// let myProtoObj = {
+//   foo: 1,
+//   bar: 2,
+// };
+
+// let myObj = Object.create(myProtoObj)
+
+// myObj['qux'] = 3
+
+// no
+// 1 iterates only over myObj
+// 2 iterates over myProtoObj and myObj
+
+// let objKeys = Object.keys(myObj);
+// objKeys.forEach(function(key) {
+//   console.log(key);
+// });
+
+// for (let key in myObj) {
+//   console.log(key);
+// }
+
+// for (let key in myObj) {
+//   if (myObj.hasOwnProperty(key)) {
+//     console.log(key);
+//   }
+// }
+
+// 8
