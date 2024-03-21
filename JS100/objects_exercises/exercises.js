@@ -117,3 +117,66 @@
 
 // 9
 // 'hi' and 'hello'
+
+// 10
+// primitive = 1,2,"a","b",false,null
+// objects = [1, 2, ["a", ["b", false]], null, {}], ["a", ["b", false]], ["b", false], {}
+
+// 11
+// let obj = {
+//   foo: { a: "hello", b: "world" },
+//   bar: ["example", "mem", null, { xyz: 6 }, 88],
+//   qux: [4, 8, 12]
+// };
+
+// obj.bar[3].xyz = 606 or obj["bar"][3]["xyz"] = 606;
+// obj.bar[4] = 69
+// obj.bar[2] = {abc : 96}
+
+// console.log(obj['bar'])
+
+// 12
+// function foo(bar) {
+//   console.log(bar, bar, bar);
+// }
+
+// let bar = foo
+
+// foo("hello"); // should print "hello hello hello"
+// bar("hi");    // should print "hi hi hi"
+
+// 13
+// function foo(bar) {
+//   console.log(bar());
+// }
+
+// foo(function() { return "Welcome" });
+// foo(function() { return 3.1415 });
+// foo(function() { return [1, 2, 3] });
+
+// 14
+// variables - hello, greeting, name, xyzzy, howdy, foo
+// object property names - a, b, c, d, 0, 1, 2
+// primitive values - 'Hi', 'Grace', 1, 2, 3, 4, 5, ' ', a, b, c, d, 0, 1, 2
+// objects - { a: 1, b: 2, c: [3, 4, 5], d: {} }, [3, 4, 5], {}, function hello(){} function xyzzy(){}
+
+// 15
+//  variables
+// - bar, arg1, arg2, foo, qux, result
+
+// object property names
+// - abc, def, ghi, jkl, mno, pqr, 0, 1, 2, 3
+
+// primitive values
+// - 'Hello', 1, 2, 3, 4, 5, 6, null, NaN, abc, def, ghi, jkl, mno, pqr, 'Victor', 'Antonina', 0, 1, 2, 3, 0, 1, 2
+
+//  objects
+// - function bar(), [1, 2, 3, [4, 5, 6]], [4, 5, 6], 
+// {
+//     abc: [1, 2, 3, [4, 5, 6]],
+//     def: null,
+//     ghi: NaN,
+//     jkl: foo,
+//     mno: arg1,
+//     pqr: arg2,
+//   }
