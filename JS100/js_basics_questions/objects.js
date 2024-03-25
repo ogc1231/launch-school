@@ -61,3 +61,53 @@
 // 5
 // { prefix: 'Pacific' }
 // { Indian: 'Pacific' }
+
+// 6
+// let obj = {
+//   num: 42,
+//   'property name': 'string value',
+//   true: false,
+//   fun: function() {
+//     console.log('Harr Harr!');
+//   },
+// };
+
+// for (let prop in obj) {
+//   if (prop === true) {
+//     console.log("It's true!");
+//   }
+// }
+// is compare prop ro boolean true not the key-value true
+
+// 7
+// let vehicle = {
+//   manufacturer: 'Tesla',
+//   model: 'Model X',
+//   year: 2015,
+//   range: 295,
+//   seats: 7
+// };
+
+// let keys = Object.keys(vehicle)
+
+// console.log(keys)
+
+// 8
+// let person = {
+//   title: 'Duke',
+//   name: 'Nukem',
+//   age: 33
+// };
+
+// let nestedPerson = Object.entries(person)
+// console.log(nestedPerson)
+
+// 9
+// let nestedArray = [['title', 'Duke'], ['name', 'Nukem'], ['age', 33]];
+
+// let newArray = Object.fromEntries(nestedArray)
+
+// console.log(newArray)
+
+
+// 10
