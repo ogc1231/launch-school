@@ -1,11 +1,25 @@
 {
-  "welcome": "Welcome to Calculator!",
-  "number 1": "What's the first number?",
-  "number 2": "What's the second number?",
-  "invalidNumber": "Hmm... that doesn't look like a valid number.",
-  "operation": "What operation would you like to perform?\n1) Add 2) Subtract 3) Multiply 4) Divide 5) Power 6) Remainder",
-  "choose": "Must choose 1, 2, 3, 4, 5 or 6",
-  "result": "The result is:",
-  "another calculation": "Would you like to perform another operation? (y/n)",
-  "thanks": "Thank you for using our calculator"
+  "en": {
+    "welcome": "Welcome to Calculator!",
+    "number 1": "What's the first number?",
+    "number 2": "What's the second number?",
+    "invalidNumber": "Hmm... that doesn't look like a valid number.",
+    "operation": "What operation would you like to perform?\n1) Add 2) Subtract 3) Multiply 4) Divide 5) Power 6) Remainder",
+    "choose": "Must choose 1, 2, 3, 4, 5 or 6",
+    "result": "The result is:",
+    "another calculation": "Would you like to perform another operation? (y/n)",
+    "thanks": "Thank you for using the calculator!"
+  },
+  "es": {
+    "welcome": "Bienvenido a la calculadora!",
+    "number 1": "¿Cuál es el primer número?",
+    "number 2": "¿Cuál es el segundo número?",
+    "invalidNumber": "Hmm... eso no parece un número válido.",
+    "operation": "¿Qué operación quieres realizar?\n1) Suma 2) Resta 3) Multiplicación 4) División 5) Potencia 6) Resto",
+    "choose": "Debe elegir 1, 2, 3, 4, 5 ó 6",
+    "result": "El resulto es:",
+    "another calculation": "¿Desea realizar otra operación? (y/n)",
+    "thanks": "Gracias por utilizar la calculadora!"
+  }
 }
+

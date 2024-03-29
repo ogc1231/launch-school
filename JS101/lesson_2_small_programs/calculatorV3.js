@@ -1,6 +1,10 @@
-const MESSAGES = require('./messages.json');
-
 const readline = require("readline-sync");
+const MESSAGES = require('./messages.json');
+const LANGUAGE = 'en'; // Change 'en' to 'es' for caluculator in Spanish
+
+function messages(message, lang='en') {
+  return MESSAGES[lang][message];
+}
 
 function prompt(message) {
   console.log(`=> ${message};`);
@@ -10,31 +14,31 @@ function invalidNumber(num) {
   return num.trimStart() === '' || Number.isNaN(Number(num));
 }
 
-prompt(MESSAGES['welcome']);
+prompt(messages('welcome', LANGUAGE));
 
 while (true) {
   
-  prompt(MESSAGES['number 1']);
+  prompt(messages('number 1', LANGUAGE));
   let num1 = readline.question();
   
   while (invalidNumber(num1)) {
-    prompt(MESSAGES['invalidNumber']);
+    prompt(messages('invalidNumber', LANGUAGE));
     num1 = readline.question();
   }
   
-  prompt(MESSAGES['number 2']);
+  prompt(messages('number 2', LANGUAGE));
   let num2 = readline.question();
   
   while (invalidNumber(num2)) {
-    prompt(MESSAGES['invalidNumber']);
+    prompt(messages('invalidNumber', LANGUAGE));
     num2 = readline.question();
   }
   
-  prompt(MESSAGES['operation']);
+  prompt(messages('operation', LANGUAGE));
   let operation = readline.question();
   
   while (!['1', '2', '3', '4', '5', '6'].includes(operation)) {
-    prompt(MESSAGES['choose']);
+    prompt(messages('choose', LANGUAGE));
     operation = readline.question();
   }
   
@@ -60,14 +64,14 @@ while (true) {
       break;
   }
   
-  prompt(`${MESSAGES['result']} ${output}`);
+  prompt(`${messages('result', LANGUAGE)} ${output}`);
 
 
-  prompt(MESSAGES['another calculation']);
+  prompt(messages('another calculation', LANGUAGE));
   let answer = readline.question();
   
   if (answer[0].toLowerCase() != 'y') {
-    prompt(MESSAGES['thanks'])
+    prompt(messages('thanks', LANGUAGE))
     break;
   }
 }
