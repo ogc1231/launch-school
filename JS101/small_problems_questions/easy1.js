@@ -33,16 +33,30 @@
 // }
 
 // 4
-let readlineSync = require("readline-sync");
-const ONE_METER_SQUARED_IN_FEET = 10.7639
+// let readlineSync = require("readline-sync");
+// const ONE_METER_SQUARED_IN_FEET = 10.7639
 
-console.log("Enter the length of the room in meters: ")
-let length = parseInt(readlineSync.prompt())
+// console.log("Enter the length of the room in meters: ")
+// let length = parseInt(readlineSync.prompt())
 
-console.log("Enter the width of the room in meters: ")
-let width = parseInt(readlineSync.prompt())
+// console.log("Enter the width of the room in meters: ")
+// let width = parseInt(readlineSync.prompt())
 
-let areaMeters = length * width
-let areaFeet = (length * ONE_METER_SQUARED_IN_FEET) * (width * ONE_METER_SQUARED_IN_FEET)
+// let areaMeters = length * width
+// let areaFeet = (length * ONE_METER_SQUARED_IN_FEET) * (width * ONE_METER_SQUARED_IN_FEET)
     
-console.log(`The area of the room is ${areaMeters.toFixed(2)} square meters (${areaFeet.toFixed(2)} square feet).`)
+// console.log(`The area of the room is ${areaMeters.toFixed(2)} square meters (${areaFeet.toFixed(2)} square feet).`)
+
+// 5
+let readlineSync = require("readline-sync");
+
+let bill = Number(readlineSync.question('What is the bill? '));
+
+let tipPercentage = Number(readlineSync.question('What is the tip percentage? '));
+
+let totalTip = bill * (tipPercentage / 100);
+
+let totalBill = bill + totalTip;
+
+console.log(`The tip is $${totalTip.toFixed(2)}`);
+console.log(`The total is $${totalBill.toFixed(2)}`);
