@@ -1,21 +1,34 @@
 const readline = require("readline-sync");
 const MESSAGES = require("./loan-messages.json")
 
-let loanAmount = readline.question('How much is your loan? ');
+function messages(message) {
+  return MESSAGES[message];
+}
 
-let APR = readline.question('What is your Annual Percentage Rate? ')
+function prompt(message) {
+  console.log(`=> ${message};`);
+}
 
-let loanDurationMonths = readline.question('What is the duration of your loan in months? ')
+prompt(messages('welcome'));
 
-let monthlyInterestRate = (APR / 12) / 100
+prompt(messages('loan amount'))
+let loanAmount = readline.question();
+
+prompt(messages('APR'));
+let APR = readline.question();
+
+prompt(messages('loan duration'));
+let loanDurationMonths = readline.question();
+
+let monthlyInterestRate = (APR / 12) / 100;
 let monthlyPayment = loanAmount * (monthlyInterestRate / (1 - Math.pow((1 + monthlyInterestRate), (-loanDurationMonths))));
 
-let totalPayment = monthlyPayment * 24
+let totalPayment = monthlyPayment * 24;
 
-let totalInterest = totalPayment - loanAmount
+let totalInterest = totalPayment - loanAmount;
 
-console.log(monthlyPayment.toFixed(2))
+prompt(`${messages('monthly payment')} $${monthlyPayment.toFixed(2)}`);
 
-console.log(totalPayment.toFixed(2))
+prompt(`${messages('total interest')} $${totalInterest.toFixed(2)}`);
 
-console.log(totalInterest.toFixed(2))
+prompt(`${messages('total payment')} $${totalPayment.toFixed(2)}`);

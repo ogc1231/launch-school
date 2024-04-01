@@ -7,7 +7,7 @@ function messages(message, lang='en') {
 }
 
 function prompt(message) {
-  console.log(`=> ${message};`);
+  console.log(`${message};`);
 }
 
 function invalidNumber(num) {
