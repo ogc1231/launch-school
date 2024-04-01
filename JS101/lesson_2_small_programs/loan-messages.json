@@ -1,0 +1,9 @@
+{
+  "welcome": "Welcome to the loan calculator",
+  "loan amount": "How much is your loan?",
+  "APR": "What is your APR (Annual Percentage Rate)?"
+  "loan duration": "What will be the duration of your loan?"
+  "monthly payment": "Your monthly payemnt is",
+  "total interest": "Your total interest is",
+  "total payment": "Your total payment is"
+}

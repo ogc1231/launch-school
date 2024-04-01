@@ -1,4 +1,5 @@
 const readline = require("readline-sync");
+const MESSAGES = require("./loan-messages.json")
 
 let loanAmount = readline.question('How much is your loan? ');
 
