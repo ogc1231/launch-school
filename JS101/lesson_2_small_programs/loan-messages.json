@@ -1,9 +1,12 @@
 {
   "welcome": "Welcome to the loan calculator",
+  "invalidNumber": "Must enter a postive number",
   "loan amount": "How much is your loan?",
-  "APR": "What is your Annual Percentage Rate (APR)?",
+  "APR": "What is your Annual Percentage Rate (APR)? i.e 10 for 10%",
   "loan duration": "What will be the duration of your loan in months?",
   "monthly payment": "Your monthly payment is",
   "total interest": "Your total interest is",
-  "total payment": "Your total payment is"
+  "total payment": "Your total payment is",
+  "another calculation": "Would like to calculate another loan?",
+  "thanks": "Thanks for using loan calculator"
 }
