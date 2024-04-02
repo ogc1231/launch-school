@@ -2,7 +2,7 @@ const readline = require("readline-sync");
 const MESSAGES = require('./messages.json');
 const LANGUAGE = 'en'; // Change 'en' to 'es' for caluculator in Spanish
 
-function messages(message, lang='en') {
+function messages(message, lang = 'en') {
   return MESSAGES[lang][message];
 }
 
@@ -17,31 +17,31 @@ function invalidNumber(num) {
 prompt(messages('welcome', LANGUAGE));
 
 while (true) {
-  
+
   prompt(messages('number 1', LANGUAGE));
   let num1 = readline.question();
-  
+
   while (invalidNumber(num1)) {
     prompt(messages('invalidNumber', LANGUAGE));
     num1 = readline.question();
   }
-  
+
   prompt(messages('number 2', LANGUAGE));
   let num2 = readline.question();
-  
+
   while (invalidNumber(num2)) {
     prompt(messages('invalidNumber', LANGUAGE));
     num2 = readline.question();
   }
-  
+
   prompt(messages('operation', LANGUAGE));
   let operation = readline.question();
-  
+
   while (!['1', '2', '3', '4', '5', '6'].includes(operation)) {
     prompt(messages('choose', LANGUAGE));
     operation = readline.question();
   }
-  
+
   let output;
   switch (operation) {
     case '1':
@@ -63,15 +63,15 @@ while (true) {
       output = Number(num1) % Number(num2);
       break;
   }
-  
+
   prompt(`${messages('result', LANGUAGE)} ${output}`);
 
 
   prompt(messages('another calculation', LANGUAGE));
   let answer = readline.question();
-  
-  if (answer[0].toLowerCase() != 'y') {
-    prompt(messages('thanks', LANGUAGE))
+
+  if (answer[0].toLowerCase() !== 'y') {
+    prompt(messages('thanks', LANGUAGE));
     break;
   }
 }
