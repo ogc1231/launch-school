@@ -48,15 +48,51 @@
 // console.log(`The area of the room is ${areaMeters.toFixed(2)} square meters (${areaFeet.toFixed(2)} square feet).`)
 
 // 5
-let readlineSync = require("readline-sync");
+// let readlineSync = require("readline-sync");
 
-let bill = Number(readlineSync.question('What is the bill? '));
+// let bill = Number(readlineSync.question('What is the bill? '));
 
-let tipPercentage = Number(readlineSync.question('What is the tip percentage? '));
+// let tipPercentage = Number(readlineSync.question('What is the tip percentage? '));
 
-let totalTip = bill * (tipPercentage / 100);
+// let totalTip = bill * (tipPercentage / 100);
 
-let totalBill = bill + totalTip;
+// let totalBill = bill + totalTip;
 
-console.log(`The tip is $${totalTip.toFixed(2)}`);
-console.log(`The total is $${totalBill.toFixed(2)}`);
+// console.log(`The tip is $${totalTip.toFixed(2)}`);
+// console.log(`The total is $${totalBill.toFixed(2)}`);
+
+// 6
+
+const readline = require("readline-sync");
+
+function prompt(message) {
+  console.log(`=> ${message}`);
+}
+
+prompt('Please enter an integer greater than 0:')
+let number = readline.question();
+
+while (number < 1) {
+  prompt("That's not a valid integer");
+  number = readline.question();
+}
+
+prompt('Enter "s" to compute the sum, or "p" to compute the product.');
+let choice = readline.question();
+
+while (choice !== 's' && choice !== 'p') {
+  prompt("That's not a valid choice");
+  choice = readline.question();
+}
+
+function sum() {
+  
+}
+
+function product() {
+  
+}
+
+
+prompt('The sum of the integers between 1 and 5 is 15.');
+prompt('The product of the integers between 1 and 6 is 720.');
