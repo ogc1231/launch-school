@@ -85,11 +85,13 @@ while (choice !== 's' && choice !== 'p') {
   choice = readline.question();
 }
 
-function sum() {
-  
+function sum(number) {
+  for (let i = 1, i < number; i += 1) {
+    return number[i]++
+  }
 }
 
-function product() {
+function product(number) {
   
 }
 
