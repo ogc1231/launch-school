@@ -92,7 +92,9 @@ function sum(number) {
 }
 
 function product(number) {
-  
+  for (let i = 1, i < number; i += 1) {
+    return number[i]++
+  }
 }
 
 
