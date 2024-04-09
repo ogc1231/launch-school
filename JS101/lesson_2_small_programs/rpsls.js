@@ -60,12 +60,12 @@ function displayWinner(choice, computerChoice) {
 
 while (true) {
   prompt(`Choose one: ${VALID_CHOICES.join(', ')}`);
-  let choice = readline.question();
+  let choice = readline.question().toLowerCase();
   choice =  choiceShortened(choice)
 
   while (!VALID_CHOICES.includes(choice)) {
     prompt("That's not a valid choice");
-    choice = readline.question();
+    choice = readline.question().toLowerCase();
     choice =  choiceShortened(choice);
   }
 
