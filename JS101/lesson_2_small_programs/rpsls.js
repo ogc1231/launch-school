@@ -1,8 +1,31 @@
 const readline = require("readline-sync");
 const VALID_CHOICES = ['rock', 'paper', 'scissors', 'lizard', 'spock'];
+const VALID_OPTIONS = ['y', 'n'];
 
 function prompt(message) {
   console.log(`=> ${message}`);
+}
+
+
+function choiceShortened(choice) {
+  switch (choice) {
+    case 'r':
+      choice = 'rock';
+      break;
+    case 'p':
+      choice = 'paper';
+      break;
+    case 's':
+      choice = 'scissors';
+      break;
+    case 'l':
+      choice = 'lizard';
+      break;
+    case 'sp':
+      choice = 'spock';
+      break;
+  }
+  return choice;
 }
 
 function displayWinner(choice, computerChoice) {
@@ -38,10 +61,12 @@ function displayWinner(choice, computerChoice) {
 while (true) {
   prompt(`Choose one: ${VALID_CHOICES.join(', ')}`);
   let choice = readline.question();
+  choice =  choiceShortened(choice)
 
   while (!VALID_CHOICES.includes(choice)) {
     prompt("That's not a valid choice");
     choice = readline.question();
+    choice =  choiceShortened(choice);
   }
 
   let randomIndex = Math.floor(Math.random() * VALID_CHOICES.length);
@@ -49,9 +74,9 @@ while (true) {
 
   displayWinner(choice, computerChoice);
 
-  prompt("Do you wan to play again (y/n)?");
+  prompt(`Do you wan to play again (${VALID_OPTIONS.join('/')})?`);
   let answer = readline.question().toLowerCase();
-  while (answer[0] !== 'n' && answer[0] !== 'y') {
+  while (!VALID_OPTIONS.includes(answer)) {
     prompt("Please enter 'y' or 'n'.");
     answer = readline.question().toLowerCase();
   }
