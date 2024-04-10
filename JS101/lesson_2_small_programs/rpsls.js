@@ -6,6 +6,8 @@ function prompt(message) {
   console.log(`=> ${message}`);
 }
 
+let playerScore = 0;
+let computerScore = 0;
 
 function choiceShortened(choice) {
   switch (choice) {
@@ -41,7 +43,8 @@ function displayWinner(choice, computerChoice) {
       (choice === 'lizard' && computerChoice === 'paper') ||
       (choice === 'spock' && computerChoice === 'scissors') ||
       (choice === 'spock' && computerChoice === 'rock')) {
-    prompt("You win!");
+    playerScore += 1;
+    prompt(`You win! Your score: ${playerScore}, Computer score: ${computerScore}`);
   } else if ((choice === 'rock' && computerChoice === 'paper') ||
           (choice === 'paper' && computerChoice === 'scissors') ||
           (choice === 'scissors' && computerChoice === 'rock') || 
@@ -52,9 +55,10 @@ function displayWinner(choice, computerChoice) {
           (choice === 'paper' && computerChoice === 'lizard') ||
           (choice === 'scissors' && computerChoice === 'spock') ||
           (choice === 'rock' && computerChoice === 'spock')) {
-    prompt("Computer wins!");
+    computerScore += 1;
+    prompt(`Computer wins! Your score: ${playerScore}, Computer score: ${computerScore}`);
   } else {
-    prompt("Its a tie!");
+    prompt(`Its a tie! Your score: ${playerScore}, Computer score: ${computerScore}`);
   }
 }
 
@@ -73,13 +77,40 @@ while (true) {
   let computerChoice = VALID_CHOICES[randomIndex];
 
   displayWinner(choice, computerChoice);
-
-  prompt(`Do you wan to play again (${VALID_OPTIONS.join('/')})?`);
+  
+  if (playerScore >= 5) {
+    prompt(`Player is the Grand Champion!`)
+  }
+  else if (computerScore >= 5) {
+    prompt(`Computer is the Grand Champion!`)
+  }
+  
+  if (computerScore >= 5 || playerScore >= 5) {
+    break;
+  }
+  
+  prompt(`Play next hand (${VALID_OPTIONS.join('/')})?`);
   let answer = readline.question().toLowerCase();
   while (!VALID_OPTIONS.includes(answer)) {
     prompt("Please enter 'y' or 'n'.");
     answer = readline.question().toLowerCase();
   }
 
-  if (answer[0] !== 'y') break;
+  if (answer[0] !== 'y') {
+    prompt(`Do you want to play again (${VALID_OPTIONS.join('/')})?`);
+  let answer = readline.question().toLowerCase();
+  while (!VALID_OPTIONS.includes(answer)) {
+    prompt("Please enter 'y' or 'n'.");
+    answer = readline.question().toLowerCase();
+  }
+
+  if (answer[0] !== 'y') {
+    break;
+  }
+  else {
+    playerScore = 0;
+    computerScore = 0;
+  }
+  }
 }
+
