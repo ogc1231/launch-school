@@ -2,6 +2,14 @@ const readline = require("readline-sync");
 const VALID_CHOICES = ['rock', 'paper', 'scissors', 'lizard', 'spock'];
 const VALID_OPTIONS = ['y', 'n'];
 
+const WINNING_COMBOS = {
+  rock:     ['scissors', 'lizard'],
+  paper:    ['rock',     'spock'],
+  scissors: ['paper',    'lizard'],
+  lizard:   ['paper',    'spock'],
+  spock:    ['rock',     'scissors'],
+}
+
 function prompt(message) {
   console.log(`=> ${message}`);
 }
@@ -33,16 +41,7 @@ function choiceShortened(choice) {
 function playerWins(choice, computerChoice) {
   prompt(`You chose ${choice}, computer chose ${computerChoice}`);
 
-  return (choice === 'rock' && computerChoice === 'scissors') ||
-        (choice === 'paper' && computerChoice === 'rock') ||
-        (choice === 'scissors' && computerChoice === 'paper') ||
-        (choice === 'rock' && computerChoice === 'lizard') ||
-        (choice === 'scissors' && computerChoice === 'lizard') ||
-        (choice === 'paper' && computerChoice === 'spock') ||
-        (choice === 'lizard' && computerChoice === 'spock') ||
-        (choice === 'lizard' && computerChoice === 'paper') ||
-        (choice === 'spock' && computerChoice === 'scissors') ||
-        (choice === 'spock' && computerChoice === 'rock');
+  return WINNING_COMBOS[choice].includes(computerChoice)
 }
 
 function displayWinner(choice, computerChoice) {
