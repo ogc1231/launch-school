@@ -8,7 +8,7 @@ const WINNING_COMBOS = {
   scissors: ['paper',    'lizard'],
   lizard:   ['paper',    'spock'],
   spock:    ['rock',     'scissors'],
-}
+};
 
 function prompt(message) {
   console.log(`=> ${message}`);
@@ -41,7 +41,7 @@ function choiceShortened(choice) {
 function playerWins(choice, computerChoice) {
   prompt(`You chose ${choice}, computer chose ${computerChoice}`);
 
-  return WINNING_COMBOS[choice].includes(computerChoice)
+  return WINNING_COMBOS[choice].includes(computerChoice);
 }
 
 function displayWinner(choice, computerChoice) {
