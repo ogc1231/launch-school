@@ -6,7 +6,23 @@
 // console.log(newNewAdvice);
 
 // Q2
+// let numbers = [1, 2, 3, 4, 5];
+// let numbersReversed = numbers.slice().reverse();
+// console.log(numbers);
+// console.log(numbersReversed);
 
+// let numbers2 = [1, 2, 3, 4, 5];
+// let numbersReversed2 = [...numbers2].reverse();
+// console.log(numbers2);
+// console.log(numbersReversed2);
+
+let numbers3 = [1, 2, 3, 4, 5];
+let numbersReversed3 = [];
+
+numbers3.forEach((number) => numbersReversed3.unshift(number));
+
+console.log(numbers3);
+console.log(numbersReversed3);
 
 // Q3
 // let numbers = [1, 2, 3, 4, 5, 15, 16, 17, 95, 96, 99];
