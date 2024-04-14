@@ -16,13 +16,13 @@
 // console.log(numbers2);
 // console.log(numbersReversed2);
 
-let numbers3 = [1, 2, 3, 4, 5];
-let numbersReversed3 = [];
+// let numbers3 = [1, 2, 3, 4, 5];
+// let numbersReversed3 = [];
 
-numbers3.forEach((number) => numbersReversed3.unshift(number));
+// numbers3.forEach((number) => numbersReversed3.unshift(number));
 
-console.log(numbers3);
-console.log(numbersReversed3);
+// console.log(numbers3);
+// console.log(numbersReversed3);
 
 // Q3
 // let numbers = [1, 2, 3, 4, 5, 15, 16, 17, 95, 96, 99];
@@ -46,3 +46,52 @@ console.log(numbersReversed3);
 // console.log(array);
 
 // Q6
+// let flintstones = ["Fred", "Wilma"];
+// flintstones.push(["Barney", "Betty"]);
+// flintstones.push(["Bambam", "Pebbles"]);
+
+// flintstones = [].concat(...flintstones);
+
+// console.log(flintstones);
+
+// let flintstones = ["Fred", "Wilma"];
+// flintstones.push(["Barney", "Betty"]);
+// flintstones.push(["Bambam", "Pebbles"]);
+
+// let newFlintstones = [];
+// flintstones.forEach(element => {
+//     newFlintstones = newFlintstones.concat(element);
+// });
+
+// console.log(newFlintstones);
+
+// Q7
+// let flintstones = { Fred: 0, Wilma: 1, Barney: 2, Betty: 3, Bambam: 4, Pebbles: 5 };
+
+// let arrayBarney = Object.entries(flintstones).filter(pair => pair[0] === "Barney").shift();
+// console.log(arrayBarney);
+
+// Q8
+// let numbers = [1, 2, 3, 4]; // true
+// let table = { field1: 1, field2: 2, field3: 3, field4: 4 };
+
+// console.log(Array.isArray(numbers));
+// console.log(Array.isArray(table));
+
+// Q9
+// const characters = 40;
+// let title = "Flintstone Family Members";
+// let length = title.length;
+
+// let padding = Math.floor((characters - length) / 2);
+
+// let titlePadded = title.padStart(padding + length);
+// console.log(titlePadded);
+
+// Q10
+let statement1 = "The Flintstones Rock!";
+let statement2 = "Easy come, easy go.";
+
+
+console.log(statement1.split('').filter(letter => letter === 't').length);
+console.log(statement2.split('').filter(letter => letter === 't').length);
