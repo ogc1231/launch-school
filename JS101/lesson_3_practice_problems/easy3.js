@@ -27,3 +27,16 @@
 // Q4
 // [{ first: 42 }, { second: "value2" }, 3, 4, 5]
 
+// Q5
+// function isColorValid(color) {
+//     return color === "blue" || color === "green";
+// }
+
+// const isColorValid2 = color => color === 'blue' || color === 'green';
+
+// const isColorValid3 = color => ['blue', 'green'].includes(color);
+
+// Q6
+// variables - arr, newArr, num, newNum, double, num 
+// primitives - 1, 2, 3, 1, 0, 1, 2, 1, 2
+// objects - arr, newArr
