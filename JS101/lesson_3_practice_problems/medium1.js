@@ -48,3 +48,20 @@
 // Q5
 // 0.8999999999999999
 // false, 0.3 + 0.6 !== 0.9
+
+// Q6
+// false
+// Number.isNaN()
+
+// Q7
+// 34
+
+// Q8
+// 42 is added to everyones age
+// gender is changed to other
+
+// Q9
+// paper
+
+// Q10
+// no
