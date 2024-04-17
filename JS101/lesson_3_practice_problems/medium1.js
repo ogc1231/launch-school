@@ -24,3 +24,27 @@
 // )
 
 // Q3
+// function factors(number) {
+//   let divisor = number;
+//   let factors = [];
+//   while (divisor > 0) {
+//   if (number % divisor === 0) {
+//     factors.push(number / divisor);
+//   }
+//   divisor -= 1;
+// }
+//   return factors;
+// }
+
+// console.log(factors(100));
+
+// with factors.push(divisor) the array is logged backwards
+
+// Q4
+// .push mutates orginal array
+// .concat return new array
+
+
+// Q5
+// 0.8999999999999999
+// false, 0.3 + 0.6 !== 0.9
