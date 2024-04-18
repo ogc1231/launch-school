@@ -63,40 +63,45 @@
 
 // 6
 
-const readline = require("readline-sync");
+// const readline = require("readline-sync");
 
-function prompt(message) {
-  console.log(`=> ${message}`);
-}
+// function prompt(message) {
+//   console.log(`=> ${message}`);
+// }
 
-prompt('Please enter an integer greater than 0:')
-let number = readline.question();
+// prompt('Please enter an integer greater than 0:')
+// let number = readline.question();
 
-while (number < 1) {
-  prompt("That's not a valid integer");
-  number = readline.question();
-}
+// while (number < 1) {
+//   prompt("That's not a valid integer");
+//   number = readline.question();
+// }
 
-prompt('Enter "s" to compute the sum, or "p" to compute the product.');
-let choice = readline.question();
+// prompt('Enter "s" to compute the sum, or "p" to compute the product.');
+// let choice = readline.question();
 
-while (choice !== 's' && choice !== 'p') {
-  prompt("That's not a valid choice");
-  choice = readline.question();
-}
+// while (choice !== 's' && choice !== 'p') {
+//   prompt("That's not a valid choice");
+//   choice = readline.question();
+// }
 
-function sum(number) {
-  for (let i = 1, i < number; i += 1) {
-    return number[i]++
-  }
-}
+// function sum(number) {
+//   for (let i = 1, i < number; i += 1) {
+//     return number[i]++
+//   }
+// }
 
-function product(number) {
-  for (let i = 1, i < number; i += 1) {
-    return number[i]++
-  }
-}
+// function product(number) {
+//   for (let i = 1, i < number; i += 1) {
+//     return number[i]++
+//   }
+// }
 
 
-prompt('The sum of the integers between 1 and 5 is 15.');
-prompt('The product of the integers between 1 and 6 is 720.');
+// prompt('The sum of the integers between 1 and 5 is 15.');
+// prompt('The product of the integers between 1 and 6 is 720.');
+
+// Q7
+shortLongShort('abc', 'defgh');    // "abcdefghabc"
+shortLongShort('abcde', 'fgh');    // "fghabcdefgh"
+shortLongShort('', 'xyz');         // "xyz"
