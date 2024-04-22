@@ -1,3 +1,4 @@
+// ----------------------------------------------------------------------------------------------------------------------------
 // Q1
 // function isOdd(number) {
 //     return Math.abs(number) % 2 === 1
@@ -9,7 +10,9 @@
 // console.log(isOdd(-8));
 // console.log(isOdd(0));
 // console.log(isOdd(7));
+// ----------------------------------------------------------------------------------------------------------------------------
 
+// ----------------------------------------------------------------------------------------------------------------------------
 // Q2
 
 // for (let i = 1; i < 100; i += 2) {
@@ -22,8 +25,9 @@
 //     }
 //     console.log(i);
 // }
+// ----------------------------------------------------------------------------------------------------------------------------
 
-
+// ----------------------------------------------------------------------------------------------------------------------------
 // Q3
 // for (let i = 1; i < 100; i += 1) {
 //     if (i % 2 === 1) {
@@ -31,7 +35,9 @@
 //     }
 //     console.log(i);
 // }
+// ----------------------------------------------------------------------------------------------------------------------------
 
+// ----------------------------------------------------------------------------------------------------------------------------
 // Q4
 // const readline = require('readline-sync');
 // const SQUARE_METER_IN_FEET = 10.7639
@@ -57,7 +63,9 @@
 // } else {
 //     console.log(`The area of the room is ${areaFeet.toFixed(2)} square feet or ${areaMeters.toFixed(2)} square meters`)
 // }
+// ----------------------------------------------------------------------------------------------------------------------------
 
+// ----------------------------------------------------------------------------------------------------------------------------
 // Q5
 // const readline = require("readline-sync");
 
@@ -69,7 +77,9 @@
 
 // console.log(`The tip is $${tip.toFixed(2)}`);
 // console.log(`The total is $${totalPayment.toFixed(2)}`);
+// ----------------------------------------------------------------------------------------------------------------------------
 
+// ----------------------------------------------------------------------------------------------------------------------------
 // Q6
 // const readline = require("readline-sync");
 
@@ -116,3 +126,85 @@
 // }
 
 // if starting with arrays instead of input need to change the sum and product and use array.reduce instead of for loop
+// ----------------------------------------------------------------------------------------------------------------------------
+
+// ----------------------------------------------------------------------------------------------------------------------------
+// Q7
+// function shortLongShort(str1, str2) {
+//   if (str1 > str2) {
+//     return str1 + str2 + str1;
+//   }
+//   else {
+//     return str2 + str1 + str2;
+//   }
+// }
+
+// console.log(shortLongShort('abc', 'defgh'));  
+// console.log(shortLongShort('abcde', 'fgh'));   
+// console.log(shortLongShort('', 'xyz'));
+// ----------------------------------------------------------------------------------------------------------------------------
+
+// ----------------------------------------------------------------------------------------------------------------------------
+// Q8
+// divisible by 4 = leap
+// divisible by 4 && divisible by 100 = not leap
+// divisible by 100 = not leap
+// divisible by 100 && divisible by 400 = leap 
+
+// function isLeapYear(year) {
+//   if (year % 400 === 0) {
+//     return true;
+//   } else if (year % 100 === 0) {
+//     return false;
+//   } else {
+//     return year % 4 === 0;
+//   }
+// }
+
+// console.log(isLeapYear(2016));      // true
+// console.log(isLeapYear(2015));      // false
+// console.log(isLeapYear(2100));      // false
+// console.log(isLeapYear(2400));      // true
+// console.log(isLeapYear(240000));    // true
+// console.log(isLeapYear(240001));    // false
+// console.log(isLeapYear(2000));      // true
+// console.log(isLeapYear(1900));      // false
+// console.log(isLeapYear(1752));      // true
+// console.log(isLeapYear(1700));      // false
+// console.log(isLeapYear(1));         // false
+// console.log(isLeapYear(100));       // false
+// console.log(isLeapYear(400));       // true
+
+// fails - 2400, 240000, 2000, 400
+// ----------------------------------------------------------------------------------------------------------------------------
+
+// ----------------------------------------------------------------------------------------------------------------------------
+// Q9
+// function isLeapYear(year) {
+//   if (year < 1752 && year % 4 === 0) {
+//     return true;
+//   } else if (year % 400 === 0) {
+//     return true;
+//   } else if (year % 100 === 0) {
+//     return false;
+//   } else {
+//     return year % 4 === 0;
+//   }
+// }
+
+// console.log(isLeapYear(2016));      // true
+// console.log(isLeapYear(2015));      // false
+// console.log(isLeapYear(2100));      // false
+// console.log(isLeapYear(2400));      // true
+// console.log(isLeapYear(240000));    // true
+// console.log(isLeapYear(240001));    // false
+// console.log(isLeapYear(2000));      // true
+// console.log(isLeapYear(1900));      // false
+// console.log(isLeapYear(1752));      // true 
+// console.log(isLeapYear(1700));      // true
+// console.log(isLeapYear(1));         // false
+// console.log(isLeapYear(100));       // true
+// console.log(isLeapYear(400));       // true
+// ----------------------------------------------------------------------------------------------------------------------------
+
+// ----------------------------------------------------------------------------------------------------------------------------
