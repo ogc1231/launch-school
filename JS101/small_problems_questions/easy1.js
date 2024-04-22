@@ -57,3 +57,62 @@
 // } else {
 //     console.log(`The area of the room is ${areaFeet.toFixed(2)} square feet or ${areaMeters.toFixed(2)} square meters`)
 // }
+
+// Q5
+// const readline = require("readline-sync");
+
+// let bill = parseFloat(readline.question('What is the bill?\n'));
+// let tipPercentage = parseFloat(readline.question('What is the tip percentage?\n'));
+
+// let tip = bill * (tipPercentage / 100);
+// let totalPayment = bill + tip;
+
+// console.log(`The tip is $${tip.toFixed(2)}`);
+// console.log(`The total is $${totalPayment.toFixed(2)}`);
+
+// Q6
+// const readline = require("readline-sync");
+
+// let number = parseFloat(readline.question('Please enter an integer greater than 0:\n'));
+
+// while (!Number(number) || number < 1) {
+//   number = readline.question('Please enter an integer greater than 0:\n');
+// }
+
+// let choice = readline.question('Enter "s" to compute the sum, or "p" to compute the product.\n')
+
+// while (!['S'.toLowerCase(), 'P'.toLowerCase()].includes(choice)) {
+//   choice = readline.question('Must choose "s" or "p"\n');
+// }
+
+// function computeSum(number) {
+//   let totalSum = 0;
+  
+//   for (let i = 1; i <= number; i += 1) {
+//     totalSum += i
+//   }
+//   return totalSum;
+// }
+
+// function computeProduct(number) {
+//   let totalProduct = 1;
+  
+//   for (let j = 1; j <= number; j += 1) {
+//     totalProduct *= j;
+//   }
+//   return totalProduct;
+// }
+
+// if (choice === 's') {
+//   let sum = computeSum(number)
+//   console.log(`The sum of the integers between 1 and ${number} is ${sum}.`)
+// }
+// else if (choice === 'p') {
+//   let product = computeProduct(number)
+//   console.log(`The product of the integers between 1 and ${number} is ${product}.`)
+// }
+// else {
+//   console.log(`Error. Unknown operation.");`)
+// }
+
+// if starting with arrays instead of input need to change the sum and product and use array.reduce instead of for loop
