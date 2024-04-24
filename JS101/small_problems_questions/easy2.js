@@ -159,15 +159,70 @@
 
 // Q10
 // ----------------------------------------------------------------------------------------------------------------------------
+// const readline = require("readline-sync");
 
+// console.log('What is your age?')
+// let currentAge = Number(readline.prompt());
+
+// console.log("At what age would you like to retire?");
+// let retirementAge = Number(readline.prompt());
+
+// let yearsLeft = retirementAge - currentAge;
+
+// const date = new Date();
+// let currentYear = date.getFullYear();
+// let retirementYear = currentYear + yearsLeft;
+
+// console.log(`It's ${currentYear}. You will retire in ${retirementYear}.`);
+// console.log(`You have only ${yearsLeft} years of work to go!`);
+
+// new Date() creates a new Date object
+// Date return a string od the current date
 // ----------------------------------------------------------------------------------------------------------------------------
 
 // Q11
 // ----------------------------------------------------------------------------------------------------------------------------
+// function centerOf(string) {
+//     let postion;
+//     let length;
+    
+//     if (string.length % 2 === 1) {
+//         postion = string.length / 2;
+//         length = 1;
+//     } else {
+//         postion = (string.length / 2) - 1;
+//         length = 2;
+//     }
+//     return string.substring(postion, postion + length);
+// }
 
+// console.log(centerOf('I Love JavaScript')); // "a"
+// console.log(centerOf('Launch School'));     // " "
+// console.log(centerOf('Launch'));            // "un"
+// console.log(centerOf('Launchschool'));      // "hs"
+// console.log(centerOf('x'));                 // "x"
 // ----------------------------------------------------------------------------------------------------------------------------
 
 // Q12
 // ----------------------------------------------------------------------------------------------------------------------------
+// function negative(number) {
+//     if (number < 0) {
+//         return number;
+//     } else {
+//         return -number;
+//     }
+// }
 
+// console.log(negative(5));     // -5
+// console.log(negative(-3));    // -3
+// console.log(negative(0));     // -0
+
+
+//  function negative(number) {
+//      return number < 0 ? number : -number;
+//  }
+
+// console.log(negative(5));     // -5
+// console.log(negative(-3));    // -3
+// console.log(negative(0));     // -0
 // ----------------------------------------------------------------------------------------------------------------------------
