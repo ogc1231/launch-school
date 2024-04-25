@@ -134,10 +134,44 @@
 
 // Q9
 // ----------------------------------------------------------------------------------------------------------------------------
+// function cleanUp(string) {
+//   console.log(string.replace(/\W+/g, ' '));
+// }
 
+// cleanUp("---what's my +*& line?");    // " what s my line "
 // ----------------------------------------------------------------------------------------------------------------------------
 
 // Q10
 // ----------------------------------------------------------------------------------------------------------------------------
+// function century(year) {
+//   let century = Math.floor((year - 1) / 100 + 1).toString();
+  
+//   let penultimateChar = century[century.length - 2];
+  
+//   if (penultimateChar === '1') {
+//     return century + 'th';
+//   }
+  
+//   let lastChar = century[century.length - 1];
+  
+//   if (lastChar === '1') {
+//     return century + 'st';
+//   } else if (lastChar === '2') {
+//     return century + 'nd';
+//   } else if (lastChar === '3') {
+//     return century + 'rd';
+//   } else {
+//     return century + 'th';
+//   }
+// }
 
+// console.log(century(2000));        // "20th"
+// console.log(century(2001));        // "21st"
+// console.log(century(1965));        // "20th"
+// console.log(century(256));         // "3rd"
+// console.log(century(5));           // "1st"
+// console.log(century(10103));       // "102nd"
+// console.log(century(1052));        // "11th"
+// console.log(century(1127));        // "12th"
+// console.log(century(11201));       // "113th"
 // ----------------------------------------------------------------------------------------------------------------------------
