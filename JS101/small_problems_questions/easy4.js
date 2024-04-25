@@ -101,12 +101,54 @@
 
 // Q6
 // ----------------------------------------------------------------------------------------------------------------------------
+// function wordSizes(string) {
+//   let array = string.split(' ')
+//   let count = {};
+  
+//   for (let i = 0; i < array.length; i += 1) {
+//     if (array[i].length === 0) {
+//       continue;
+//     }
+    
+//     if (!count[array[i].length]) {
+//       count[array[i].length] = 0;
+//     }
+//     count[array[i].length] += 1;
+//   }
+//   console.log(count);
+  
+// }
 
+// wordSizes('Four score and seven.');                       // { "3": 1, "4": 1, "5": 1, "6": 1 }
+// wordSizes('Hey diddle diddle, the cat and the fiddle!');  // { "3": 5, "6": 1, "7": 2 }
+// wordSizes("What's up doc?");                              // { "2": 1, "4": 1, "6": 1 }
+// wordSizes('');                                            // {}
 // ----------------------------------------------------------------------------------------------------------------------------
 
 // Q7
 // ----------------------------------------------------------------------------------------------------------------------------
+// function wordSizes(string) {
+//   let array = string.replace(/[^\w\s]/gi, "").split(' ')
+//   let count = {};
+  
+//   for (let i = 0; i < array.length; i += 1) {
+//     if (array[i].length === 0) {
+//       continue;
+//     }
+    
+//     if (!count[array[i].length]) {
+//       count[array[i].length] = 0;
+//     }
+//     count[array[i].length] += 1;
+//   }
+//   console.log(count);
+  
+// }
 
+// wordSizes('Four score and seven.');                       // { "3": 1, "4": 1, "5": 2 }
+// wordSizes('Hey diddle diddle, the cat and the fiddle!');  // { "3": 5, "6": 3 }
+// wordSizes("What's up doc?");                              // { "2": 1, "3": 1, "5": 1 }
+// wordSizes('');  
 // ----------------------------------------------------------------------------------------------------------------------------
 
 // Q8
