@@ -153,7 +153,23 @@
 
 // Q8
 // ----------------------------------------------------------------------------------------------------------------------------
+function swap(string) {
+    let array = string.split(' ').map(word => {
+        let firstChar = word.slice(0, 1);
+        let middleChar = word.slice(1, -1);
+        let lastChar = word.slice(-1);
+        
+        if (word.length === 1) {
+            lastChar = '';
+        }
+        return lastChar + middleChar + firstChar;
+    })
+    console.log(array.join(' '));
+}
 
+swap('Oh what a wonderful day it is');  // "hO thaw a londerfuw yad ti si"
+swap('Abcde');                          // "ebcdA"
+swap('a');                              // "a"
 // ----------------------------------------------------------------------------------------------------------------------------
 
 // Q9
