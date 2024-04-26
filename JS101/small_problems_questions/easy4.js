@@ -153,41 +153,69 @@
 
 // Q8
 // ----------------------------------------------------------------------------------------------------------------------------
-function swap(string) {
-    let array = string.split(' ').map(word => {
-        let firstChar = word.slice(0, 1);
-        let middleChar = word.slice(1, -1);
-        let lastChar = word.slice(-1);
+// function swap(string) {
+//     let array = string.split(' ').map(word => {
+//         let firstChar = word.slice(0, 1);
+//         let middleChar = word.slice(1, -1);
+//         let lastChar = word.slice(-1);
         
-        if (word.length === 1) {
-            lastChar = '';
-        }
-        return lastChar + middleChar + firstChar;
-    })
-    console.log(array.join(' '));
-}
+//         if (word.length === 1) {
+//             lastChar = '';
+//         }
+//         return lastChar + middleChar + firstChar;
+//     })
+//     console.log(array.join(' '));
+// }
 
-swap('Oh what a wonderful day it is');  // "hO thaw a londerfuw yad ti si"
-swap('Abcde');                          // "ebcdA"
-swap('a');                              // "a"
+// swap('Oh what a wonderful day it is');  // "hO thaw a londerfuw yad ti si"
+// swap('Abcde');                          // "ebcdA"
+// swap('a');                              // "a"
 // ----------------------------------------------------------------------------------------------------------------------------
 
 // Q9
 // ----------------------------------------------------------------------------------------------------------------------------
+// function stringToInteger(string) {
+//     return string * 1;
+// }
 
+// console.log(stringToInteger("4321") === 4321); // logs true
+// console.log(stringToInteger("570") === 570); // logs true
 // ----------------------------------------------------------------------------------------------------------------------------
 
 // Q10
 // ----------------------------------------------------------------------------------------------------------------------------
+// function stringToSignedInteger(string) {
+//     return string * 1;
+// }
 
+// console.log(stringToSignedInteger("4321") === 4321); // logs true
+// console.log(stringToSignedInteger("-570") === -570); // logs true
+// console.log(stringToSignedInteger("+100") === 100); // logs true
 // ----------------------------------------------------------------------------------------------------------------------------
 
 // Q11
 // ----------------------------------------------------------------------------------------------------------------------------
+// function integerToString(number) {
+//     console.log(`${number}`);
+// }
 
+// integerToString(4321);        // "4321"
+// integerToString(0);           // "0"
+// integerToString(5000);        // "5000"
+// integerToString(1234567890);  // "1234567890"
 // ----------------------------------------------------------------------------------------------------------------------------
 
 // Q12
 // ----------------------------------------------------------------------------------------------------------------------------
+// function signedIntegerToString(number) {
+//     if (number > 0) {
+//         return `+${number}`;
+//     } else {
+//         return `${number}`;
+//     }
+// }
 
+// console.log(signedIntegerToString(4321) === "+4321");
+// console.log(signedIntegerToString(-123) === "-123");
+// console.log(signedIntegerToString(0) === "0");
 // ----------------------------------------------------------------------------------------------------------------------------
