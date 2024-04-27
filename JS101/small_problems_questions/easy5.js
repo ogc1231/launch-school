@@ -126,7 +126,30 @@
 
 // Q8
 // ----------------------------------------------------------------------------------------------------------------------------
+// function digitList(number) {
+//     let stringArr = number.toString().split('');
+//     let newArr = [];
+    
+//     for (let i = 0; i < stringArr.length; i += 1) {
+//         newArr.push(parseInt(stringArr[i], 10));
+//     }
+    
+//     console.log(newArr);
+// }
 
+// digitList(12345);       // [1, 2, 3, 4, 5]
+// digitList(7);           // [7]
+// digitList(375290);      // [3, 7, 5, 2, 9, 0]
+// digitList(444);         // [4, 4, 4]
+
+// function digitList(number) {
+//     console.log([...String(number)].map(Number));
+// }
+
+// digitList(12345);       // [1, 2, 3, 4, 5]
+// digitList(7);           // [7]
+// digitList(375290);      // [3, 7, 5, 2, 9, 0]
+// digitList(444);         // [4, 4, 4]
 // ----------------------------------------------------------------------------------------------------------------------------
 
 // Q9
