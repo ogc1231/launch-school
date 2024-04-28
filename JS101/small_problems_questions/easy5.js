@@ -154,7 +154,32 @@
 
 // Q9
 // ----------------------------------------------------------------------------------------------------------------------------
+// function countOccurrences(array) {
+//     let count = {};
+    
+//     for (let i = 0; i < array.length; i += 1) {
+//         let element = array[i].toLowerCase();
+        
+//         if (count[element]) {
+//             count[element] += 1;
+//         } else {
+//             count[element] = 1;
+//         }
+//     }
+//     console.log(count);
+// }
 
+// let vehicles = ['car', 'car', 'truck', 'car', 'SUV', 'truck',
+//                 'motorcycle', 'suv', 'motorcycle', 'car', 'truck'];
+
+// countOccurrences(vehicles);
+
+// // console output -- your output sequence may be different
+// // car => 4
+// // truck => 3
+// // SUV => 1
+// // motorcycle => 2
+// // suv => 1
 // ----------------------------------------------------------------------------------------------------------------------------
 
 // Q10
