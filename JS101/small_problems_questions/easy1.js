@@ -38,30 +38,30 @@
 
 // Q4
 // ----------------------------------------------------------------------------------------------------------------------------
-// const readline = require('readline-sync');
-// const SQUARE_METER_IN_FEET = 10.7639
+const readline = require('readline-sync');
+const SQUARE_METER_IN_FEET = 10.7639
 
-// let operation = readline.question("Are your measuremnents in meters or Feet?\nMeters or Feet ");
+let operation = readline.question("Are your measuremnents in meters or Feet?\n");
 
-// while (!['Meters'.toLocaleLowerCase(), 'Feet'.toLowerCase()].includes(operation)) {
-//   console.log('Must choose Meters or Feet');
-//   operation = readline.question();
-// }
+while (!['Meters'.toLowerCase(), 'Feet'.toLowerCase()].includes(operation)) {
+  console.log('Must choose Meters or Feet');
+  operation = readline.question();
+}
 
-// let length = readline.question(`Enter the length of the room in ${operation}: `);
-// length = parseInt(length);
+let length = readline.question(`Enter the length of the room in ${operation}: `);
+length = parseInt(length);
 
-// let width = readline.question(`Enter the width of the room  ${operation}: `);
-// width = parseInt(width);
+let width = readline.question(`Enter the width of the room  ${operation}: `);
+width = parseInt(width);
 
-// let areaMeters = length * width
-// let areaFeet = (areaMeters) * SQUARE_METER_IN_FEET
+let areaMeters = length * width
+let areaFeet = (areaMeters) * SQUARE_METER_IN_FEET
 
-// if (operation === 'Meters'.toLowerCase()) {
-//     console.log(`The area of the room is ${areaMeters.toFixed(2)} square meters or ${areaFeet.toFixed(2)} square feet`)
-// } else {
-//     console.log(`The area of the room is ${areaFeet.toFixed(2)} square feet or ${areaMeters.toFixed(2)} square meters`)
-// }
+if (operation === 'Meters'.toLowerCase()) {
+    console.log(`The area of the room is ${areaMeters.toFixed(2)} square meters or ${areaFeet.toFixed(2)} square feet`)
+} else {
+    console.log(`The area of the room is ${areaFeet.toFixed(2)} square feet or ${areaMeters.toFixed(2)} square meters`)
+}
 // ----------------------------------------------------------------------------------------------------------------------------
 
 // Q5
