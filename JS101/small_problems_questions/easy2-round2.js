@@ -53,7 +53,24 @@
 
 // Q5
 // ----------------------------------------------------------------------------------------------------------------------------
+// const readline = require("readline-sync");
 
+// let num1 = Number(readline.question('==> Enter the first number:\n'));
+// let num2 = Number(readline.question('==> Enter the second number:\n'));
+
+// let sum = num1 + num2;
+// let minus = num1 - num2;
+// let multilpy = num1 * num2;
+// let divide = Math.floor(num1 / num2);
+// let remainder = num1 % num2;
+// let power = Math.pow(num1, num2);
+
+// console.log(`${num1} + ${num2} = ${sum}`);
+// console.log(`${num1} - ${num2} = ${minus}`);
+// console.log(`${num1} * ${num2} = ${multilpy}`);
+// console.log(`${num1} / ${num2} = ${divide}`);
+// console.log(`${num1} % ${num2} = ${remainder}`);
+// console.log(`${num1} ** ${num2} = ${power}`);
 // ----------------------------------------------------------------------------------------------------------------------------
 
 // Q6
