@@ -104,20 +104,77 @@
 
 // Q8
 // ----------------------------------------------------------------------------------------------------------------------------
+// function oddities(array) {
+//     let newArray = [];
+    
+//     for (let i = 0; i < array.length; i += 1) {
+//         if (i % 2 === 0) {
+//             newArray.push(array[i]);
+//         }
+//     }
+//     return newArray;
+// }
 
+// console.log(oddities([2, 3, 4, 5, 6])); // logs [2, 4, 6]
+// console.log(oddities([1, 2, 3, 4, 5, 6])); // logs [1, 3, 5]
+// console.log(oddities(["abc", "def"])); // logs ['abc']
+// console.log(oddities([123])); // logs [123]
+// console.log(oddities([])); // logs []
 // ----------------------------------------------------------------------------------------------------------------------------
 
 // Q9
 // ----------------------------------------------------------------------------------------------------------------------------
+// function generateAge(minAge, maxAge) {
+//     return Math.floor(Math.random() * (maxAge - minAge + 1) + minAge);
+// }
 
+// let age = generateAge(20, 120);
+// console.log(`Teddy is ${age} years old!`);
 // ----------------------------------------------------------------------------------------------------------------------------
 
 // Q10
 // ----------------------------------------------------------------------------------------------------------------------------
+// const readline = require("readline-sync");
+// const date = new Date();
 
+// let currentAge = Number(readline.question('What is your age?\n'));
+// let retirementAge = Number(readline.question('At what age would you like to retire?\n'));
+// let yearsLeft = retirementAge - currentAge;
+
+// let year = date.getFullYear();
+// let retirementYear = year + yearsLeft;
+
+// console.log(`It's ${year}. You will retire in ${retirementYear}.`);
+// console.log(`You have only ${yearsLeft} years of work to go!`);
 // ----------------------------------------------------------------------------------------------------------------------------
 
 // Q11
 // ----------------------------------------------------------------------------------------------------------------------------
+// function centerOf(str) {
+//     let middleIndex = Math.floor(str.length / 2);
+    
+//     if (str.length % 2 === 1) {
+//         return str[middleIndex];
+//     } else {
+//         return str[middleIndex - 1] + str[middleIndex];
+//     }
+// }
 
+
+// console.log(centerOf('I Love JavaScript')); // "a"
+// console.log(centerOf('Launch School'));     // " "
+// console.log(centerOf('Launch'));            // "un"
+// console.log(centerOf('Launchschool'));      // "hs"
+// console.log(centerOf('x'));                 // "x"
+// ----------------------------------------------------------------------------------------------------------------------------
+
+// Q12
+// ----------------------------------------------------------------------------------------------------------------------------
+// function negative(number) {
+//     return -Math.abs(number);
+// }
+
+// console.log(negative(5));     // -5
+// console.log(negative(-3));    // -3
+// console.log(negative(0));     // -0
 // ----------------------------------------------------------------------------------------------------------------------------
