@@ -141,16 +141,33 @@
 
 // Q10
 // ----------------------------------------------------------------------------------------------------------------------------
-function century(year) {
-}
+// function century(year) {
+//     let centuryString = Math.ceil(year / 100).toString();
+//     let lastChar = centuryString[centuryString.length - 1];
+//     let secondLastChar = centuryString[centuryString.length - 2];
+    
+//     if (secondLastChar === '1') {
+//         return centuryString + 'th';
+//     }
+    
+//     if (lastChar === '1') {
+//         return centuryString + 'st';
+//     } else if (lastChar === '2') {
+//         return centuryString + 'nd';
+//     } else if (lastChar === '3') {
+//         return centuryString + 'rd';
+//     } else {
+//         return centuryString + 'th';
+//     }
+// }
 
-console.log(century(2000));        // "20th"
-console.log(century(2001));        // "21st"
-console.log(century(1965));        // "20th"
-console.log(century(256));         // "3rd"
-console.log(century(5));           // "1st"
-console.log(century(10103));       // "102nd"
-console.log(century(1052));        // "11th"
-console.log(century(1127));        // "12th"
-console.log(century(11201));       // "113th"
+// console.log(century(2000));        // "20th"
+// console.log(century(2001));        // "21st"
+// console.log(century(1965));        // "20th"
+// console.log(century(256));         // "3rd"
+// console.log(century(5));           // "1st"
+// console.log(century(10103));       // "102nd"
+// console.log(century(1052));        // "11th"
+// console.log(century(1127));        // "12th"
+// console.log(century(11201));       // "113th"
 // ----------------------------------------------------------------------------------------------------------------------------
