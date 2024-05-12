@@ -127,23 +127,74 @@
 
 // Q8
 // ----------------------------------------------------------------------------------------------------------------------------
-function oddities(arr) {
-    
-}
+// function oddities(arr) {
+//     let newArr = [];
+//     for (let i = 0; i < arr.length; i += 1) {
+//         if (i % 2 === 0) {
+//             newArr.push(arr[i]);
+//         }
+//     }
+//     return newArr;
+// }
 
-console.log(oddities([2, 3, 4, 5, 6])); // logs [2, 4, 6]
-console.log(oddities([1, 2, 3, 4, 5, 6])); // logs [1, 3, 5]
-console.log(oddities(["abc", "def"])); // logs ['abc']
-console.log(oddities([123])); // logs [123]
-console.log(oddities([])); // logs []
+// console.log(oddities([2, 3, 4, 5, 6])); // logs [2, 4, 6]
+// console.log(oddities([1, 2, 3, 4, 5, 6])); // logs [1, 3, 5]
+// console.log(oddities(["abc", "def"])); // logs ['abc']
+// console.log(oddities([123])); // logs [123]
+// console.log(oddities([])); // logs []
 // ----------------------------------------------------------------------------------------------------------------------------
 
 // Q9
 // ----------------------------------------------------------------------------------------------------------------------------
+// function randomAge(min, max) {
+//     let age = Math.floor(Math.random() * (max - min + 1) + min);
+//     console.log(`Teddy is ${age} years old!`);
+// }
 
+// randomAge(20, 120);
 // ----------------------------------------------------------------------------------------------------------------------------
 
 // Q10
 // ----------------------------------------------------------------------------------------------------------------------------
+// const readline = require("readline-sync");
 
+// let currentAge = readline.question('What is your age?\n');
+// let retirementAge = readline.question('At what age would you like to retire?\n');
+// let date = new Date();
+// let yearsLeft = retirementAge - currentAge;
+// let year = date.getFullYear();
+// let retirementYear = year + yearsLeft;
+
+// console.log(`It's ${year}. You will retire in ${retirementYear}.`);
+// console.log(`You have only ${yearsLeft} years of work to go!`);
+// ----------------------------------------------------------------------------------------------------------------------------
+
+// Q11
+// ----------------------------------------------------------------------------------------------------------------------------
+// function centerOf(string) {
+//     let centerIndex = Math.floor(string.length / 2);
+    
+//     if (string.length % 2 === 0) {
+//         console.log(string.slice(centerIndex - 1, centerIndex + 1));
+//     } else {
+//         console.log(string.slice(centerIndex, centerIndex + 1));
+//     }
+// }
+
+// centerOf('I Love JavaScript'); // "a"
+// centerOf('Launch School');     // " "
+// centerOf('Launch');            // "un"
+// centerOf('Launchschool');      // "hs"
+// centerOf('x');                 // "x"
+// ----------------------------------------------------------------------------------------------------------------------------
+
+// Q12
+// ----------------------------------------------------------------------------------------------------------------------------
+// function negative(num) {
+//     console.log(-Math.abs(num));
+// }
+
+// negative(5);     // -5
+// negative(-3);    // -3
+// negative(0);     // -0
 // ----------------------------------------------------------------------------------------------------------------------------
