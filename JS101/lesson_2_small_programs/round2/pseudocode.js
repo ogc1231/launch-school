@@ -56,18 +56,11 @@
 // iterate thourgh postion
 // if index doesn't equal -1 
 
-// function index(string, nth, char) {
-//   let index = 0
-  
-//   for (let i = 0; i < nth; i += 1) {
-//     if (index !== -1) {
-//       index = string.indexOf(char, index + 1);
-//     }
-//   }
-//   return index
-// }
+function index(string, nth, char) {
+  return string.indexOf(char, (string.indexOf(char) + nth));
+}
 
-// console.log(index('axbxcdxex', 3, 'x'));
+console.log(index('xaxbxcdxex', 1, 'x'));
 
 // 5
 // # a function that takes two arrays of numbers and returns the result of
