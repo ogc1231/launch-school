@@ -36,9 +36,9 @@ while (!['1', '2', '3', '4'].includes(choice)) {
 
 let output;
 
-switch(choice) {
+switch (choice) {
   case '1':
-    output = Number(num1 + num2); 
+    output = Number(num1 + num2);
     break;
   case '2':
     output = Number(num1 - num2);
