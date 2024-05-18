@@ -1,6 +1,24 @@
 const readline = require("readline-sync");
 const VALID_CHOICES = ['rock', 'paper', 'scissors', 'lizard', 'spock'];
 
+const WINNING_COMBOS = {
+  rock:     ['scissors', 'lizard'],
+  paper:    ['rock',     'spock'],
+  scissors: ['paper',    'lizard'],
+  lizard:   ['paper',    'spock'],
+  spock:    ['rock',     'scissors'],
+};
+
+let playerScore = 0;
+let computerScore = 0;
+let round = 1;
+
+function playerWins(playerChoice, computerChoice) {
+  prompt(`You chose ${playerChoice}, computer chose ${computerChoice}`);
+
+  return WINNING_COMBOS[playerChoice].includes(computerChoice);
+}
+
 function choiceShortened(playerChoice) {
   switch (playerChoice) {
     case 'r':
@@ -27,72 +45,58 @@ function prompt(message) {
 }
 
 function displayWinner(playerChoice, computerChoice) {
-  prompt(`User chose: ${playerChoice}, Computer chose: ${computerChoice}`);
-  
-  if (playerChoice === computerChoice) {
-    prompt(`It's a tie!`);
-  } else if ((playerChoice === 'rock' && computerChoice === 'scissors') || 
-    (playerChoice === 'rock' && computerChoice === 'lizard') ||
-    (playerChoice === 'scissors' && computerChoice === 'paper') ||
-    (playerChoice === 'scissors' && computerChoice === 'lizard') ||
-    (playerChoice === 'paper' && computerChoice === 'rock') ||
-    (playerChoice === 'paper' && computerChoice === 'spock') || 
-    (playerChoice === 'lizard' && computerChoice === 'paper') ||
-    (playerChoice === 'lizard' && computerChoice === 'spock') || 
-    (playerChoice === 'spock' && computerChoice === 'rock') ||
-    (playerChoice === 'spock' && computerChoice === 'scissors')) {
-      prompt(`Player wins!`);
-      playerScore += 1;
+  if (playerWins(playerChoice, computerChoice)) {
+    playerScore += 1;
+    prompt(`You win! Your score: ${playerScore}, Computer score: ${computerScore}`);
+  } else if (playerChoice === computerChoice) {
+    prompt(`Its a tie! Your score: ${playerScore}, Computer score: ${computerScore}`);
   } else {
-    prompt(`Players loses, Computer wins!`);
     computerScore += 1;
+    prompt(`Computer wins! Your score: ${playerScore}, Computer score: ${computerScore}`);
   }
 }
-
-let playerScore = 0;
-let computerScore = 0;
-let round = 1;
 
 while (true) {
 
   prompt(`Round: ${round}`);
-  prompt(`Choose one: ${VALID_CHOICES.join(', ')} `)
+  prompt(`Choose one: ${VALID_CHOICES.join(', ')} `);
   let playerChoice = readline.question();
   playerChoice = choiceShortened(playerChoice);
-  
+
   while (!VALID_CHOICES.includes(playerChoice)) {
     prompt("That's not a valid choice");
     playerChoice = readline.question();
     playerChoice = choiceShortened(playerChoice);
   }
-  
+
   let randomIndex = Math.floor(Math.random() * VALID_CHOICES.length);
   let computerChoice = VALID_CHOICES[randomIndex];
-  
-  displayWinner(playerChoice, computerChoice)
-  
+
+  prompt(`User chose: ${playerChoice}, Computer chose: ${computerChoice}`);
+  displayWinner(playerChoice, computerChoice);
+
   prompt(`User score: ${playerScore} | Computer score: ${computerScore}`);
-  
+
   if (playerScore >= 5) {
-    prompt(`Player is the champion!`);
+    prompt(`Player is the champion with a score of ${playerScore} vs ${computerScore}`);
     break;
   } else if (computerScore >= 5) {
-    prompt(`Computer is the champion!`);
+    prompt(`Computer is the champion with a score of ${computerScore} vs ${playerScore}`);
     break;
   }
-  
+
   prompt(`Play again (y/n)?`);
   let answer = readline.question().toLowerCase();
-  
+
   while (answer[0] !== 'n' && answer[0] !== 'y') {
     prompt(`Enter 'y' or 'n'`);
     answer = readline.question().toLowerCase();
   }
-  
+
   if (answer[0].toLowerCase() === 'n') {
     prompt(`Thanks for playing!`);
     break;
   }
-  
+
   round += 1;
 }
