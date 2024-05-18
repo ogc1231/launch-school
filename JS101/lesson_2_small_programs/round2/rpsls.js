@@ -42,13 +42,20 @@ function displayWinner(playerChoice, computerChoice) {
     (playerChoice === 'spock' && computerChoice === 'rock') ||
     (playerChoice === 'spock' && computerChoice === 'scissors')) {
       prompt(`Player wins!`);
+      playerScore += 1;
   } else {
     prompt(`Players loses, Computer wins!`);
+    computerScore += 1;
   }
 }
 
+let playerScore = 0;
+let computerScore = 0;
+let round = 1;
+
 while (true) {
 
+  prompt(`Round: ${round}`);
   prompt(`Choose one: ${VALID_CHOICES.join(', ')} `)
   let playerChoice = readline.question();
   playerChoice = choiceShortened(playerChoice);
@@ -64,6 +71,8 @@ while (true) {
   
   displayWinner(playerChoice, computerChoice)
   
+  prompt(`User score: ${playerScore} | Computer score: ${computerScore}`);
+  
   prompt(`Play again (y/n)?`);
   let answer = readline.question().toLowerCase();
   
@@ -76,4 +85,6 @@ while (true) {
     prompt(`Thanks for playing!`);
     break;
   }
+  
+  round += 1;
 }
