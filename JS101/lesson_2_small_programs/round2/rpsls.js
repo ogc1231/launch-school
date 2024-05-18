@@ -1,6 +1,27 @@
 const readline = require("readline-sync");
 const VALID_CHOICES = ['rock', 'paper', 'scissors', 'lizard', 'spock'];
 
+function choiceShortened(playerChoice) {
+  switch (playerChoice) {
+    case 'r':
+      playerChoice = 'rock';
+      break;
+    case 'p':
+      playerChoice = 'paper';
+      break;
+    case 's':
+      playerChoice = 'scissors';
+      break;
+    case 'l':
+      playerChoice = 'lizard';
+      break;
+    case 'sp':
+      playerChoice = 'spock';
+      break;
+  }
+  return playerChoice;
+}
+
 function prompt(message) {
   console.log(`==> ${message}`);
 }
@@ -30,10 +51,12 @@ while (true) {
 
   prompt(`Choose one: ${VALID_CHOICES.join(', ')} `)
   let playerChoice = readline.question();
+  playerChoice = choiceShortened(playerChoice);
   
   while (!VALID_CHOICES.includes(playerChoice)) {
     prompt("That's not a valid choice");
     playerChoice = readline.question();
+    playerChoice = choiceShortened(playerChoice);
   }
   
   let randomIndex = Math.floor(Math.random() * VALID_CHOICES.length);
