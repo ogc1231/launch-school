@@ -73,6 +73,14 @@ while (true) {
   
   prompt(`User score: ${playerScore} | Computer score: ${computerScore}`);
   
+  if (playerScore >= 5) {
+    prompt(`Player is the champion!`);
+    break;
+  } else if (computerScore >= 5) {
+    prompt(`Computer is the champion!`);
+    break;
+  }
+  
   prompt(`Play again (y/n)?`);
   let answer = readline.question().toLowerCase();
   
