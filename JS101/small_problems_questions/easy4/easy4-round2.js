@@ -1,6 +1,23 @@
 // Q1
 // ----------------------------------------------------------------------------------------------------------------------------
+// const readline = require("readline-sync");
 
+// let numberArr = [];
+
+// let num1 = readline.question('Enter the 1st number:\n');
+// let num2 = readline.question('Enter the 2nd number:\n');
+// let num3 = readline.question('Enter the 3rd number:\n');
+// let num4 = readline.question('Enter the 4th number:\n');
+// let num5 = readline.question('Enter the 5th number:\n');
+// let lastNum = readline.question('Enter the last number:\n');
+
+// numberArr.push(num1, num2, num3, num4, num5);
+
+// if (numberArr.includes(lastNum)) {
+//     console.log(`The number ${lastNum} appears in ${num1}, ${num2}, ${num3}, ${num4}, ${num5}.`);
+// } else {
+//     console.log(`The number ${lastNum} does not appears in ${num1}, ${num2}, ${num3}, ${num4}, ${num5}.`);
+// }
 // ----------------------------------------------------------------------------------------------------------------------------
 
 // Q2
