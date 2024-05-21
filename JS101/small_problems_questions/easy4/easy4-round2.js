@@ -22,7 +22,20 @@
 
 // Q2
 // ----------------------------------------------------------------------------------------------------------------------------
+// function isPalindrome(string) {
+//     let stringArrReversed = string.split('').reverse().join('');
+    
+//     if (string === stringArrReversed) {
+//         console.log(true);
+//     } else {
+//         console.log(false);
+//     }
+// }
 
+// isPalindrome('madam');               // true
+// isPalindrome('Madam');               // false (case matters)
+// isPalindrome("madam i'm adam");      // false (all characters matter)
+// isPalindrome('356653');              // true
 // ----------------------------------------------------------------------------------------------------------------------------
 
 // Q3
