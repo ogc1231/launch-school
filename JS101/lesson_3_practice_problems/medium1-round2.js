@@ -1,16 +1,56 @@
 // Q1
 // ----------------------------------------------------------------------------------------------------------------------------
+// let padding = ' ';
 
+// for (let i = 0; i <= 9; i += 1) {
+//   console.log(padding.repeat(i) + 'The Flintstones Rock!');
+// }
 // ----------------------------------------------------------------------------------------------------------------------------
 
 // Q2
 // ----------------------------------------------------------------------------------------------------------------------------
+// Method 1
+// let munstersDescription = "The Munsters are creepy and spooky.";
+// let munstersDescriptionArr = munstersDescription.toUpperCase().split(' ');
+// munstersDescriptionArr[0] = 'tHE';
+// munstersDescriptionArr[1] = 'mUNSTERS';
+// let newMunstersDescription = munstersDescriptionArr.join(' ');
 
+// console.log(newMunstersDescription);
+
+// Method 2
+// let munstersDescription = "The Munsters are creepy and spooky.";
+
+// let newMunstersDescription = 
+// munstersDescription.split('').map(function (char) {
+//   if (char === char.toUpperCase()) {
+//     return char.toLowerCase();
+//   } else {
+//     return char.toUpperCase();
+//   }
+// }).join('');
+
+// console.log(newMunstersDescription);
 // ----------------------------------------------------------------------------------------------------------------------------
 
 // Q3
 // ----------------------------------------------------------------------------------------------------------------------------
+// function factors(number) {
+//   let divisor = number;
+//   let factors = [];
+  
+//   while (divisor > 0) {
+//   if (number % divisor === 0) {
+//     factors.push(number / divisor);
+//   }
+//   divisor -= 1;
+// }
+//   return factors;
+// }
 
+// console.log(factors(1));
+// console.log(factors(-1));
+// console.log(factors(0));
 // ----------------------------------------------------------------------------------------------------------------------------
 
 // Q4
