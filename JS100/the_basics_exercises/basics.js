@@ -48,11 +48,11 @@ let pets = {asta: 'dog', butterscotch: 'cat', pudding: 'cat', neptune: 'fish', d
 console.log(pets)
 
 // 10
-False
+// False
 
 // 11
 // equals 3
 
 // 12
-True
+// True
 

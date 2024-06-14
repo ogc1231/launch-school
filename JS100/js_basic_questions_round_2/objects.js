@@ -192,3 +192,9 @@
 // console.log(person.name.isStageName);       // false
 // console.log(clonedPerson.name.isStageName); // false
 // ----------------------------------------------------------------------------------------------------------------------------
+
+// Objects
+// logs object keys in array -- Object.keys(object)
+// convert object to nestedArray -- Object.entries(object)
+// convert nestedArray to object -- Object.fromEntries(nestedArray)
+// return shallow copy of object -- return {...obj} or return Object.assign({}, obj)
