@@ -97,32 +97,21 @@
 // console.log(countSubstr('Hello, Hello! How are you doing Mellody?', 'ello' ));// => 3
 // ----------------------------------------------------------------------------------------------------------------------------
 
-// Q5 specific elements of an array (proably not the best approach)
+// Q5 specific elements of an array
 // ----------------------------------------------------------------------------------------------------------------------------
-// function countEle(arr, str) {
-//   let count = 0;
+function countEle(arr, element) {
+  let count = 0;
   
-//   if (typeof str == String) {
-//     let arrString = arr.join(" ");
-    
-//     for (let i = 0; i < arrString.length; i += 1) {
-//       if (arrString.substring(i, str.length + i) === str) {
-//         count += 1;
-//       }
-//     }
-//     return count;
-//   } else {
-//     for (let i = 0; i < arr.length; i += 1) {
-//       if (arr[i] === str) {
-//         count += 1;
-//       }
-//     }
-//     return count;
-//   }
-// }
+  for (let i = 0; i < arr.length; i += 1) {
+    if (arr[i] === element) {
+      count += 1;
+    }
+  }
+  return count;
+}
 
-// console.log(countEle(['name', 'year', 'age', 'name'], 'name')); // => 2
-// console.log(countEle([1,2,3,4,5,1,2,3,4], 2)); //=> 2
+console.log(countEle(['name', 'year', 'age', 'name'], 'name')); // => 2
+console.log(countEle([1,2,3,4,5,1,2,3,4], 2)); //=> 2
 // ----------------------------------------------------------------------------------------------------------------------------
 
 // Q6 
