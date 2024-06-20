@@ -99,34 +99,105 @@
 
 // Q5 specific elements of an array
 // ----------------------------------------------------------------------------------------------------------------------------
-function countEle(arr, element) {
-  let count = 0;
+// function countEle(arr, element) {
+//   let count = 0;
   
-  for (let i = 0; i < arr.length; i += 1) {
-    if (arr[i] === element) {
-      count += 1;
-    }
-  }
-  return count;
-}
+//   for (let i = 0; i < arr.length; i += 1) {
+//     if (arr[i] === element) {
+//       count += 1;
+//     }
+//   }
+//   return count;
+// }
 
-console.log(countEle(['name', 'year', 'age', 'name'], 'name')); // => 2
-console.log(countEle([1,2,3,4,5,1,2,3,4], 2)); //=> 2
+// console.log(countEle(['name', 'year', 'age', 'name'], 'name')); // => 2
+// console.log(countEle([1,2,3,4,5,1,2,3,4], 2)); //=> 2
 // ----------------------------------------------------------------------------------------------------------------------------
 
-// Q6 
+// Q6 duplicates more than once
+// ----------------------------------------------------------------------------------------------------------------------------
+// function countDuplic(str) {
+//   let strArr = str.split(" ");
+//   let wordCount = {};
+//   let duplicateCount = 0;
+  
+//   for (let i = 0; i < strArr.length; i += 1) {
+//     let word = strArr[i];
+    
+//     if (wordCount[word]) {
+//       wordCount[word] += 1;
+//     } else {
+//       wordCount[word] = 1;
+//     }
+//   }
+  
+//   for (let word in wordCount) {
+//     if (wordCount[word] > 1) {
+//       duplicateCount += 1;
+//     }
+//   }
+  
+//   return duplicateCount;
+// }
+
+// console.log(countDuplic('one two one three two')); //=> 2
+// console.log(countDuplic('flower cat cat dog flower dog')); //=> 3
 // ----------------------------------------------------------------------------------------------------------------------------
 
+// Q6b duplicates excalty twice
+// ----------------------------------------------------------------------------------------------------------------------------
+// function countDuplic(str) {
+//   let count = 0;
+//   let wordCount = {};
+  
+//   for (let i = 0; i < str.length; i += 1) {
+//     let word = str[i];
+    
+//     if (wordCount[word]) {
+//       wordCount[word] += 1;
+//     } else {
+//       wordCount[word] = 1;
+//     }
+//   }
+  
+//   for (let word in wordCount) {
+//     if (wordCount[word] === 2) {
+//       count += 1;
+//     }
+//   }
+//   return count;
+// }
+
+// console.log(countDuplic('123123')); //=> 3
+// console.log(countDuplic('abcdea ab')); //=> 1
 // ----------------------------------------------------------------------------------------------------------------------------
 
-// Q9
+// Q7 pairs in an array
 // ----------------------------------------------------------------------------------------------------------------------------
+// function appearTwice(arr) {
+//   let newArr = [];
+//   let elementCount = {}
+  
+//   for (let i = 0; i < arr.length; i += 1) {
+//     let element = arr[i];
+    
+//     if (elementCount[element]) {
+//       elementCount[element] += 1;
+//     } else {
+//       elementCount[element] = 1;
+//     }
+//   }
+  
+//   for (let element in elementCount) {
+//     if (elementCount[element] === 2) {
+//       newArr.push(element);
+//     }
+//   }
+  
+//   return newArr;
+// }
 
-// ----------------------------------------------------------------------------------------------------------------------------
-
-// Q10
-// ----------------------------------------------------------------------------------------------------------------------------
-
+// console.log(appearTwice([1, 2, undefined, 'hello', 2, undefined])); //=> [2, undefined];
 // ----------------------------------------------------------------------------------------------------------------------------
 
 // Q11
