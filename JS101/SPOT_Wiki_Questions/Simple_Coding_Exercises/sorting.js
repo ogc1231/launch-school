@@ -129,12 +129,30 @@
 // console.log(sorting([[1,2,3], [0,1], [2,1]])); //=> [[1,2,3], [2,1], [0,1]]
 // ----------------------------------------------------------------------------------------------------------------------------
 
-// Q11
+// Q11 - Additional exercises
+// takes an multidimensional array and returns an array sorted in descending order according to length of the array
+// ----------------------------------------------------------------------------------------------------------------------------
+// function sortArrLength(arr) {
+//     return arr.sort(function(a, b){return b.length - a.length});
+// }
+
+// console.log(sortArrLength([[1,2,undefined], [null, 0, 'hello wolrd', 11], [{1:1}]])); // => [[null, 0, 'hello wolrd', 11], [1,2,undefined], [{1:1}] ];
+// console.log(sortArrLength([['a'], ['ab', 'a', null], [101, 1]])); // => [['ab', 'a', null], [101, 1], ['a']]
 // ----------------------------------------------------------------------------------------------------------------------------
 
+// Q12 - Additional exercises
+//  takes an array of objects as an argument and return sorted array in ascending order depending on sum of an array stored as a value of key arr
 // ----------------------------------------------------------------------------------------------------------------------------
+// function sortArrOfObj(arr) {
+//     return arr.sort((a, b) => {
+//         for (let i = 0; i < Math.min(a.arr.length, b.arr.length); i += 1) {
+//             if (a.arr[i] !== b.arr[i]) {
+//                 return a.arr[i] - b.arr[i];
+//             }
+//         }
+//         return a.arr.length - b.arr.length;
+//     })
+// }
 
-// Q12
-// ----------------------------------------------------------------------------------------------------------------------------
-
+// console.log(sortArrOfObj([{arr : [1,2]}, {arr: [11]}, {arr: [1,2,3,0]}])); // => [{arr : [1,2]}, {arr: [1,2,3,0]}, {arr: [11]}];
 // ----------------------------------------------------------------------------------------------------------------------------
