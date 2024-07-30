@@ -253,9 +253,65 @@
 //     });
 // }));
 // ---------------------------------------- 18
+// let arr = [['a', 1], ['b', 'two'], ['sea', {'c': 3}], ['D', ['a', 'b', 'c']]];
 
+// let obj = Object.fromEntries(arr);
+
+// console.log(obj);
 // ---------------------------------------- 19
+// let munsters = {
+//   herman: { age: 32, gender: 'male' },
+//   lily: { age: 30, gender: 'female' },
+//   grandpa: { age: 402, gender: 'male' },
+//   eddie: { age: 10, gender: 'male' },
+//   marilyn: { age: 23, gender: 'female'}
+// };
+
+// let deepCopy = JSON.parse(JSON.stringify(munsters), (munster, info) => Object.freeze(info));
+
+// deepCopy.herman.age += 1;
+// deepCopy.baby = { age: 0, gender: 'male'};
+
+// console.log(munsters);
+// console.log(deepCopy);
 
 // ---------------------------------------- 20
+// function createUUID() {
+//     let characters = ['a', 'b', 'c', 'd', 'e', 'f', 0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+//     let sections = [8, 4, 4, 4, 12];
+//     let uuid = '';
+    
+//     sections.forEach((section, sectionIndex) => {
+//         for (let index = 1; index <= section; index++) {
+//             let randomIndex = Math.floor(Math.random() * characters.length);
+//             uuid += characters[randomIndex];
+//         }
+
+//         if (sectionIndex < sections.length - 1) {
+//             uuid += '-';
+//         }
+//     });
+//   return uuid;
+// }
+
+// console.log(createUUID());
+// console.log(createUUID());
+// console.log(createUUID());
 
 // ---------------------------------------- 21
+function scream(message, helper) {
+  const shout = () => message.toUpperCase();
+
+  return helper(shout());
+}
+
+const exclamate = str => str + "!!!";
+
+const foo = ["heLp", "Boo", "arGH", "Oh no"];
+const FOO = foo.map(word => scream(word, exclamate));
+
+// higher-order functions
+// scream, map
+
+// callbacks
+// exclamate, word => scream(word, exclamate
